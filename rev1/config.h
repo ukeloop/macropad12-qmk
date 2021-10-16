@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_DI_PIN D3
 
 #ifdef RGB_MATRIX_ENABLE
-#    define RGBLED_NUM 12
+#    define RGBLED_NUM 16
 #    define DRIVER_LED_TOTAL RGBLED_NUM
 #    define RGB_MATRIX_KEYPRESSES                // reacts to keypresses
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED true  // turn off effects when suspended
@@ -39,6 +39,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define DEBOUNCE 5
 
-#define ENCODERS_PAD_A { B6 }
-#define ENCODERS_PAD_B { B2 }
+#define ENCODERS_PAD_A { B5, B6 }
+#define ENCODERS_PAD_B { B4, B2 }
 #define ENCODER_RESOLUTION 4

@@ -21,14 +21,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "quantum.h"
 
 #define LAYOUT( \
-                   k13, \
-    k11, k10, k07, k03, \
-    k09, k08, k04, k01, \
-    k12, k06, k05, k02  \
+              k14, k13, \
+    k01, k02, k03, k04, \
+    k05, k06, k07, k08, \
+    k09, k10, k11, k12  \
 ) \
 { \
     {   k01,   k02,   k03,   k04, KC_NO }, \
     {   k05,   k06,   k07,   k08, KC_NO }, \
-    {   k09,   k10,   k11,   k12, KC_NO }, \
+    {   k09,   k10,   k11,   k12,   k14 }, \
     { KC_NO, KC_NO, KC_NO, KC_NO,   k13 }  \
 }

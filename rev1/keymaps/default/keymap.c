@@ -30,7 +30,7 @@ enum layer_number {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_DEFAULT] = LAYOUT(
         // ,-----------------------------------.
-                           LT(_ADJUST, KC_MUTE),
+                               KC_MPLY, LT(_ADJUST, KC_MUTE),
         // |--------+--------+--------+--------|
                KC_F1,   KC_F2,   KC_F3,   KC_F4,
         // |--------+--------+--------+--------|
@@ -41,9 +41,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_ADJUST] = LAYOUT(
         // ,-----------------------------------.
-                                        _ADJUST,
+                               XXXXXXX,  _ADJUST,
         // |--------+--------+--------+--------|
-             RGB_TOG, RGB_MOD, XXXXXXX, EEPROM_RESET,
+             RGB_TOG, RGB_MOD, XXXXXXX, XXXXXXX,
         // |--------+--------+--------+--------|
              RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI,
         // |--------+--------+--------+--------|
@@ -94,9 +94,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) { /* left encoder */
         if (clockwise) {
-            tap_code(KC_DOWN);
+            tap_code(KC_RIGHT);
         } else {
-            tap_code(KC_UP);
+            tap_code(KC_LEFT);
         }
     }
 
